@@ -9,7 +9,7 @@ app.config['MYSQL_DB'] = 'sara_db'
 
 mysql = MySQL(app)
 
-@app.route('/api/get_word', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_word():
     cur = mysql.connection.cursor()
     cur.execute("SELECT word FROM words")
