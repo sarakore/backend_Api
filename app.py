@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request, render_template
 from flask_mysqldb import MySQL
 
 app = Flask(__name__)
+app.config['MYSQL_UNIX_SOCKET'] = 'C:/ProgramData/MySQL/MySQL Server 1.5.2/mysql.sock'
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'sarakore'
